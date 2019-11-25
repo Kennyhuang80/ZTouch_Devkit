@@ -1,8 +1,7 @@
 /************************************************************************************************
-** File:        ledblink.c
-** Description: The program initially rotates the LEDS. If a switch(SW4-SW7) button is pressed, 
-**              the rotation direction is reversed. The purpose of this program demonstrates
-**              the usage of GPIO, Timer and interrupts.
+** File:        main.c
+** Description: The program initially display a key value and beep when touch happens.
+				TA works as the 1KHz PWM to driver the buzzer. T1 works as the 1ms systick.
 **              LVR dectection is at 2.3V as configured in the Project Settings-> FlashOption
 **              SmartOptions
 **          
