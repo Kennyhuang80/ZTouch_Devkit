@@ -84,6 +84,12 @@
 #include "lcd.h"
 #include "utility.h"
 
+/*smart option*/
+_Rom unsigned char SMT1 _At 0x3C = 0xFF;
+_Rom unsigned char SMT2 _At 0x3D = 0xFF;
+_Rom unsigned char SMT3 _At 0x3E = 0xF8;	//normal vector
+_Rom unsigned char SMT4 _At 0x3F = 0xBF;	//LVR 2.3V, internal 8MHz RCOsc
+
 /*******************
  *  global variables
  */

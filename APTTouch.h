@@ -39,7 +39,7 @@
 #define      MCONH_ADD      0x2c
 #define      FILTER1_ADD    0x2d
 
-#define      GSR            0x05
+#define      GSR            0x03    //5
 #if defined (_APT8L08) 
 #define      MCONL          0x50
 #define      K1ENB          0xff
@@ -83,7 +83,8 @@ unsigned char _Rom APTTouchSensingTab[8]={8,7,6,8,6,8,6,7};   //change with touc
 #endif
 
 #if defined (_APT8L16)
-unsigned char _Rom APTTouchSensingTab[16]={8,7,6,8,6,8,6,7,6,6,6,6,6,6,6,6};  //change with touch board
+//unsigned char _Rom APTTouchSensingTab[16]={8,7,6,8,6,8,6,7,6,6,6,6,6,6,6,6};  //change with touch board
+unsigned char _Rom APTTouchSensingTab[16]={7,5,6,7,7,11,7,7,9,10,10,9,7,7,10,8};  //change with touch board
 #endif
 
 /*************************************************************************************
