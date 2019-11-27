@@ -60,7 +60,7 @@
 #define      SENSES         0x08
 #define      GSRA           0x02
 #define      GSRB           0x02
-#define      REFUTH         0x04
+#define      REFUTH         0x09
 #define      KEYATH         0x10
 #define      DSMIT          0x04
 #if defined (_LTouchnReset)

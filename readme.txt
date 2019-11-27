@@ -20,3 +20,7 @@
 		1) modify GSR to lower value, not to trigger X4 threshold.
 		2) adjust the sensitivity of each key.
 		3) make code smartoption, and set LVR to 2.3V.
+		
+2019-11-27
+	3rd version SW:
+		1) modify REFUTH to avoid touch keep triggering.		
