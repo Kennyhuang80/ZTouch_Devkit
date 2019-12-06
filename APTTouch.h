@@ -22,22 +22,22 @@
 #define      APT_INT_PIN_INPUT    P1CONL &=0xCF;P1CONL |=0x10   //P1.2 is INT pin wirh internal pull-up
 
 #define      READ_SDA_STATUS      P3&0x20         //Read SDA status
-#define      PartAdd              0xac            //chip address
+#define      PartAdd              0xAC            //chip address
 
-#define      GSR_ADD        0x20
-#define      MCONL_ADD      0x21
-#define      BUR_ADD        0x22
-#define      K0ENB_ADD      0x23
-#define      K1ENB_ADD      0x24
-#define      SENSECON_ADD   0x25
-#define      SENSES_ADD     0x26
-#define      GSRA_ADD       0x27
-#define      GSRB_ADD       0x28
-#define      REFUTH_ADD     0x29
-#define      KEYATH_ADD     0x2a
-#define      DSMIT_ADD      0x2b
-#define      MCONH_ADD      0x2c
-#define      FILTER1_ADD    0x2d
+#define      GS_ADD             0x20
+#define      MCON_ADD           0x21
+#define      BASE_UP_ADD        0x22
+#define      K0EN_ADD           0x23
+#define      K1EN_ADD           0x24
+#define      SENSECON_ADD       0x25
+#define      SENSES_ADD         0x26
+#define      GSRA_ADD           0x27
+#define      GSRB_ADD           0x28
+#define      REFUTH_ADD         0x29
+#define      DM0_ADD            0x2a
+#define      DSMIT_ADD          0x2b
+#define      MCONH_ADD          0x2c
+#define      DM1_ADD            0x2d
 
 #define      GSR            0x03    //5
 #if defined (_APT8L08) 
@@ -75,8 +75,41 @@
 #define      LTouchReset    0x40
 #define      LTouchnReset   0x00
 
-unsigned char _Rom APTRegAdd[]={GSR_ADD,MCONL_ADD,BUR_ADD,K0ENB_ADD,K1ENB_ADD,SENSECON_ADD,SENSES_ADD,GSRA_ADD,GSRB_ADD,REFUTH_ADD,KEYATH_ADD,DSMIT_ADD,MCONH_ADD,FILTER1_ADD};
-unsigned char _Rom APTRegData[]={GSR,   MCONL,    BUR,    K0ENB,    K1ENB,    SENSECON,    SENSES,    GSRA,    GSRB,    REFUTH,    KEYATH,    DSMIT,    MCONH,    FILTER1};
+unsigned char _Rom APTRegAdd[] = 
+{
+    GS_ADD,
+    MCON_ADD,
+    BASE_UP_ADD,
+    K0EN_ADD,
+    K1EN_ADD,
+    SENSECON_ADD,
+    SENSES_ADD,
+    GSRA_ADD,
+    GSRB_ADD,
+    REFUTH_ADD,
+    DM0_ADD,
+    DSMIT_ADD,
+    MCONH_ADD,
+    DM1_ADD
+};
+
+unsigned char _Rom APTRegData[] =
+{
+    GSR,   
+    MCONL,    
+    BUR,    
+    K0ENB,    
+    K1ENB,    
+    SENSECON,    
+    SENSES,    
+    GSRA,    
+    GSRB,    
+    REFUTH,    
+    KEYATH,    
+    DSMIT,    
+    MCONH,    
+    FILTER1
+};
 
 #if defined (_APT8L08)
 unsigned char _Rom APTTouchSensingTab[8]={8,7,6,8,6,8,6,7};   //change with touch board
